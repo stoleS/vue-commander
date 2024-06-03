@@ -1,0 +1,44 @@
+{
+  "name": "vue-kommando",
+  "version": "0.0.1",
+  "description": "Minimal Vue command pattern library",
+  "main": "./dist/vue-kommando.umd.js",
+  "module": "./dist/vue-kommando.mjs",
+  "scripts": {
+    "dev": "vite build -w",
+    "build": "vite build",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoleS/vue-kommando.git"
+  },
+  "types": "./dist/types.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/vue-kommando.umd.js",
+      "import": "./dist/vue-kommando.mjs",
+      "types": "./dist/types.d.ts"
+    }
+  },
+  "author": "Predrag Stosic",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/stoleS/vue-kommando/issues"
+  },
+  "homepage": "https://github.com/stoleS/vue-kommando#readme",
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@padcom/eslint-config-typescript": "^0.6.0",
+    "typescript": "~5.0.4",
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "^3.7.2",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "eslintConfig": {
+    "extends": "@padcom/eslint-config-typescript"
+  }
+}
